@@ -1,0 +1,206 @@
+/* Common styles for both pages */
+.page-header {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    background-color: #f8f9fa;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Agenda Page Styles */
+.agenda-calendar {
+    margin-bottom: 3rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    padding: 0.5rem;
+    border: 1px solid #eee;
+    text-align: center;
+    position: relative;
+}
+
+.calendar-day.has-event {
+    background-color: #e3f2fd;
+}
+
+.events-list {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.event-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.event-date {
+    text-align: center;
+    min-width: 80px;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 0.25rem;
+}
+
+.event-date .date {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    display: block;
+}
+
+.event-date .month {
+    color: #666;
+    text-transform: uppercase;
+}
+
+.event-details h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.event-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    color: #666;
+}
+
+.event-meta i {
+    margin-right: 0.25rem;
+}
+
+/* Statistics Page Styles */
+.statistics-section {
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+.stats-summary {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 0.25rem;
+}
+
+.stat-item h4 {
+    margin-bottom: 0.5rem;
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.stat-item .number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .event-meta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-6 {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
